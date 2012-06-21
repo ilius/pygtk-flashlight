@@ -18,9 +18,17 @@
 # Also avalable in /usr/share/common-licenses/GPL on Debian systems
 # or /usr/share/licenses/common/GPL3/license.txt on ArchLinux
 
+import sys
+
+if '-h' in sys.argv or '--help' in sys.argv:
+    print '''Run flashlight.py (or /usr/bin/flashlight) with Python 2.x (>=2.6),
+and the program will start in full screen.
+Press Esc key to exit program.
+Press left mouse button (on any point) to change the color.
+Color will be saved in ~/.flashlight for the next run.'''
+    sys.exit(0)
 
 import os
-import sys
 from os.path import join, isfile
 
 import gobject
@@ -132,7 +140,7 @@ if __name__=='__main__':
     win = FlashLightWindow()
     win.present()
     win.fullscreen()
-    gtk.main()
+    sys.exit(gtk.main())
 
 
 

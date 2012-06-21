@@ -1,6 +1,6 @@
 Run flashlight.py with Python 2.x (>=2.6), and the program will start in full screen
 Press Esc key to exit program
-Press left-click button to change the color
+Press left mouse button (on any point) to change the color
 Color will be saved in ~/.flashlight for the next run
 
 
