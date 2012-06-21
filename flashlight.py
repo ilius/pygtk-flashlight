@@ -101,8 +101,10 @@ class FlashLightWidget(gtk.Widget):
         print event.button
         if event.button == 1:
             dialog = gtk.ColorSelectionDialog('Flashlight Color')
+            selection = dialog.get_color_selection()
+            selection.set_current_color(rgbToGdkColor(*color))
             if dialog.run()==gtk.RESPONSE_OK:
-                color = gdkColorToRgb(dialog.get_color_selection().get_current_color())
+                color = gdkColorToRgb(selection.get_current_color())
                 saveConf()
                 self.queue_draw()
             dialog.destroy()
