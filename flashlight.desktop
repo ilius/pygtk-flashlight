@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Categories=Application;Utility;
+Name=Flashlight
+Icon=flashlight
+Exec=flashlight
+

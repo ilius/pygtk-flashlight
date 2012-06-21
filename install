@@ -1,0 +1,9 @@
+#!/bin/bash
+cd `dirname "$0"`
+cp flashlight.py /usr/local/bin/flashlight
+cp flashlight.png /usr/local/share/icons
+cp flashlight.desktop /usr/local/share/applications
+
+
+
+
